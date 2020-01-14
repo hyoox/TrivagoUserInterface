@@ -1,2 +1,2 @@
 # TrivagoUserInterface
-AFDEmp CB9 Trivago Interface Project
+AFDEmp CB9 Trivago UserInterface Project using HTML5, CSS and Javascript
