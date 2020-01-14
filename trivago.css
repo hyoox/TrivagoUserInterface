@@ -30,7 +30,7 @@ header {
 
     height: 40px;
     width: 150px;
-    background-image: url(images/map.jpg);
+    background-image: url(map.jpg);
     border: 1px solid white;
 }
 
@@ -212,13 +212,15 @@ section {
   .autocomplete-items div {
     padding: 10px;
     cursor: pointer;
-    background-color: #000; 
-    border-bottom: 1px solid #d4d4d4; 
+    background-color: white; 
+    border-bottom: 1px solid #d4d4d4;
+    color: black; 
   }
   
   /*when hovering an item:*/
   .autocomplete-items div:hover {
-    background-color: #000; 
+    background-color:white;
+    color:black; 
   }
   
   /*when navigating through the items using the arrow keys:*/
