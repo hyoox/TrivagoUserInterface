@@ -1,0 +1,228 @@
+header {
+    background: #37454d;
+    color: white;
+}
+
+.border-left-radius-0 {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.border-right-radius-0 {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.bg-color {
+    background-color: #37454d;
+    color: white;
+}
+
+.lh-10 {
+    line-height: 10px;
+}
+
+.bg-main {
+    background-color: #dadde1;
+}
+
+.btn-map {
+
+    height: 40px;
+    width: 150px;
+    background-image: url(images/map.jpg);
+    border: 1px solid white;
+}
+
+#map-btn {
+
+    border: groove;
+    background: white;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.card-direction-row {
+    flex-direction: row !important;
+    width: fit-content;
+}
+
+.image-size {
+    height: 250px;
+    width: 250px;
+
+}
+
+#stars {
+    color: coral;
+}
+
+.info-hotels {
+    /* width: 25%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+
+}
+
+.info-hotels>div>h6 {
+    flex: 1 1 0;
+}
+
+.no-borders {
+    border: 0 !important;
+    text-align: center;
+}
+
+h6>button {
+    background-color: green;
+    color: white;
+
+}
+
+section {
+    background-color: white;
+}
+
+
+.deal-buttons {
+    display: block;
+    width: 100%;
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.flexing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#website,
+#website2,
+#price-hotel,
+#price-hotel2,
+#price-hotel-nights,
+#price-hotel-nights2 {
+    color: green;
+    font: bold;
+}
+#website{
+
+    padding-top: 85px;
+    font-size: larger;
+}
+
+.price-nights {
+    flex: 1 1 0;
+}
+
+#more-deals {
+    border: none;
+    font-weight: bold;
+}
+
+.no-border{
+    border: none;
+    border-radius: 0rem;
+
+}
+
+#check-out {
+    border-left: 10px orangered solid;
+}
+
+#check-in {
+    border-left: 10px royalblue solid;
+}
+
+/* HOVERS */
+#search-btn:hover {
+    color: #007bff;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+#map-btn:hover {
+    color: #0e8d2e;
+    background-color: rgb(122, 148, 63);
+    border-color: #fff;
+    font-weight: bold;
+}
+
+#deal-btn:hover,
+#deal-btn2:hover {
+    color: green;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.hoverable-links:hover {
+    color: #007bff;
+    background-color: aqua;
+}
+{
+    box-sizing: border-box;
+  }
+  
+  body {
+    font: 16px Arial;  
+  }
+  
+  /*the container must be positioned relative:*/
+  .autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type=text] {
+    background-color: #fff;
+    width: 100%;
+  }
+  
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #000; 
+    border-bottom: 1px solid #d4d4d4; 
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #000; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+  }

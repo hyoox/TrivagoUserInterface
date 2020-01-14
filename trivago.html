@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="trivago.css" />
+</head>
+
+<body>
+    <header class="container">
+        <form class="container pt-3">
+            <!-- row 1 -->
+            <div class="form-row">
+                <form autocomplete="off" action="/action_page.php">
+                    <div class="col-8 col-sm-10 pr-0 autocomplete" style="width:300px;">
+                        <input id="myInput" type="text" class="form-control border-right-radius-0" placeholder="Search by city">
+                    </div>
+                
+                <div class="col-4 col-sm-2 pl-0 ">
+                    <button type="submit" class="btn btn-primary border-left-radius-0 btn-block" id="search-btn">Search</button>
+                </div>
+            </div>
+        </form>
+            <!-- row 2 -->
+            <div class="form-row pt-2">
+                <div class="col">
+                    <h6>Check in</h6>
+                    <input type="date" class="form-control no-border" id="check-in">
+                </div>
+                <div class="col">
+                    <h6>Check out</h6>
+                    <input type="date" class="form-control no-border" id="check-out">
+                </div>
+
+                <div class="col" style="margin-top:27px;">
+                    <select name="room" class="form-control no-border">
+                        <option value="single">Single</option>
+                        <option value="double">Double</option>
+                        <option value="family">Family</option>
+                    </select>
+                </div>
+            </div>
+            <!-- row 3 -->
+            <div class="form-row pt-2 lh-10 pb-0">
+                <div class="form-group col-4 mb-0">
+                    <label for="maxprixe">Price</label>
+                    <label id="max-price" style="margin-left: 226px;">max $</label>
+                    <input name="maxprice" type="range" id="slider" class="custom-range" min="0" step="1" max="6090">
+                </div>
+                <div class="col form-group mb-0">
+                    <label for="property">Property type</label>
+                    <select name="property" class="form-control bg-color border-0">
+                        <option value="1">1 star</option>
+                        <option value="2">2 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="5">5 stars</option>
+                    </select></div>
+                <div class=" form-group col mb-0">
+                    <label for="rating">Guest rating</label>
+                    <select name="rating" class="form-control bg-color border-0">
+                        <option value="2">Okay</option>
+                        <option value="6">Fair</option>
+                        <option value="7">Good</option>
+                        <option value="8.5">Very Good</option>
+                        <option value="10">Excellent</option>
+                    </select>
+                </div>
+                <div class="form-group col-4 mb-0">
+                    <label for="location">Hotel location</label>
+                    <select name="location" class="form-control bg-color border-0">
+                        <option>Paris</option>
+                        <option>Toulouse</option>
+                        <option>Marseille</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </header>
+    <div class="container bg-main">
+        <main class="container">
+            <!-- VIEW MAP AND SORT -->
+            <div class="row pt-3">
+                <div class="col-4">
+                    <div class="btn-map">
+                        <button type="button" id="map-btn" name="btn-map" class="btn-sm" data-toggle="modal"
+                            data-target="#modal">View Map</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">View Map</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="images/map.jpg" style="width: 450px; height: 350px; ">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-right pr-0">
+                    <!--SORT BY-->
+                    <label for="sort-by-filters">Sort By</label>
+
+                </div>
+                <div class="col-4">
+                    <select name="Sort By" id="sort-by-filters" class="btn-block">
+                    </select>
+                </div>
+            </div>
+            <div id="hotelsList"></div>
+            <section></section>
+
+        </main>
+    </div>
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP POPPER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- MY JS -->
+    <script src="trivago.js"></script>
+</body>
+
+</html>
